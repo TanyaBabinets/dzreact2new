@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="text/babel" src="clubList.jsx">
+  </script>
+  <script type="text/babel" src="clubInfo.jsx">
+  </script>
+  <script type="text/babel" src="clubRewards.jsx">
+  </script>
+  <script type="text/babel" src="clubTeam.jsx">
+  </script>
+  <script type="text/babel">
+    const propsValues = {
+      title: "Club's List",
+      clubs: [
+        {
+          name: "Barcelona",
+          city: "Barcelona, Spain",
+          founded: "1899",
+          logo: "/img/barca.jfif",
+          rewards: ["5x UEFA Supercup Winner", "31x Spanish Cup winner", "14x Spanish Super Cup winner", "3x FIFA Club World Cup winner", "4x Champions League Winner"],
+          players: ["Pablo Torre", "Ansu Fati", "Lamine Yamal", "Raphinha", "Iñaki Peña", "I. Martinez", "Cubarsí", "R. Araujo", "Héctor Fort"]
+        },
+        {
+          name: "Manchester United F.C.",
+          city: "Manchester, GB",
+          founded: "1878",
+          logo: "/img/mUnited.png",
+          rewards: ["FA Cup Winner. 2023-2024", "English League Cup winner. 2022-2023", "FA Cup Runner up. 2022-2023", "Europa League Winner", "Europa League runner-up. 2020-2021"],
+          players: ["Altay Bayindir", "Tom Heaton", "Andre Onana", "Victor Lindelof", "Noussair Mazraoui", "Matthijs de Ligt", "Harry Maguire"]
+        },
+        {
+          name: "Real Madrid",
+          city: "	Madrid, Spain",
+          founded: "1899",
+          logo: "/img/real.png",
+          rewards: ["5 UEFA Champions League titles", "6 UEFA Super Cups", "2 UEFA Cups", "8 FIFA Club World Cup titles"],
+          players: ["Thibaut Courtois", "Luis Lopez", "Andrii Lunin", "Fran Gonzalez", "Sergio Mestre", "Pablo Ramon", "Dani Carvajal", "Eder Militao"]
+        },
+        {
+          name: "Chelsea",
+          city: "Fulham Road, GB",
+          founded: "1905",
+          logo: "/img/che.jfif",
+          rewards: ["UEFA Champions League", "UEFA Europa League", "2 UEFA Cup Winners Cup", "2 UEFA Super Cup", "FIFA Club World Cup"],
+          players: ["Robert Sánchez", "Levi Colwill", "	Axel Disasi", "Benoît Badiashile", "Marc Cucurella", "Ben Chilwell", "Renato Veiga"]
+        },
+      ]
+    };
+    ReactDOM.createRoot(
+      document.getElementById("app")
+    )
+      .render(
+        <React.StrictMode>
+          <ClubList data={propsValues} />
+        </React.StrictMode>
+      );
+  </script>
+</body>
+</html>
